@@ -1,0 +1,6 @@
+
+#from virtual machine:
+
+scp level02.pcap  ldedier@192.168.1.32:~
+ssh   ldedier@192.168.1.32
+
