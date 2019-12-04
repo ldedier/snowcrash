@@ -1,0 +1,1 @@
+echo "getflag > /tmp/file" > /opt/openarenaserver/cron

