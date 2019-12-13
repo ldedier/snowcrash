@@ -1,2 +1,4 @@
-./level10 File $ip
-nc -l 6969
+woupa2yuojeeaaed06riuj63c
+
+sh -x script1.sh & sh -x script2.sh &
+while [ 1 ]; do nc -l 6969 ;done
