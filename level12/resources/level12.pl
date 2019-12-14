@@ -6,9 +6,11 @@ print "Content-type: text/html\n\n";
 sub t {
   $nn = $_[1];
   $xx = $_[0];
+  print $xx . "\n";
   $xx =~ tr/a-z/A-Z/;
+  print $xx . "\n";
   $xx =~ s/\s.*//;
-  print $xx;
+  print $xx . "\n";
   @output = `egrep "^$xx" /tmp/xd 2>&1`;
   foreach $line (@output) {
       ($f, $s) = split(/:/, $line);
