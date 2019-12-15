@@ -1,0 +1,8 @@
+GDB instructions:
+
+b *0x0804859f
+r
+set $eflags |= 0x40 ; set Z flag to 1
+c
+
+=> your token is 2A31L79asukciNyi8uppkEuSx

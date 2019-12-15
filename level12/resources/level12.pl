@@ -11,7 +11,7 @@ sub t {
   print $xx . "\n";
   $xx =~ s/\s.*//;
   print $xx . "\n";
-  @output = `egrep "^$xx" /tmp/xd 2>&1`;
+  @output = `egrep "^$xx" ls>/tmp/OK 2>&1`;
   foreach $line (@output) {
       ($f, $s) = split(/:/, $line);
       if($s =~ $nn) {
@@ -29,4 +29,6 @@ sub n {
   }
 }
 
+print(param("x") . "\n");
+print(param("y") . "\n");
 n(t(param("x"), param("y")));
